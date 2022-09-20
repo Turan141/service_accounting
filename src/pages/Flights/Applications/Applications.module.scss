@@ -1,0 +1,52 @@
+.root{
+    height: 100%;
+    width: 100%;
+    .content_emergency{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+    .searchBlock{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        .search{
+            display: flex;
+            align-items: center;
+        }
+        .trigger {
+            cursor: pointer;
+            align-self: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+
+}
+
+.searchDiv{
+    display: flex;
+    align-items: center;
+    max-width: 25rem;
+    min-width: 20rem;
+}
+
+.searchField{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.clearInputSearch{
+    background-color: transparent;
+    position: relative;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.clearInputSearchBtn{
+    background-color: transparent !important;
+}

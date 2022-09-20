@@ -1,0 +1,32 @@
+@import "../../../assets/styles/colors";
+
+.root {
+  background-color: get-color('white', 50);
+  padding: 24px;
+
+}
+
+.subHeader {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-weight: 700 !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.status {
+  font-size: 12px;
+}
+
+.table {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

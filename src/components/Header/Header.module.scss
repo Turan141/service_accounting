@@ -1,0 +1,68 @@
+@import '~@assets/styles/colors.scss';
+
+.root {
+  background-color: get-color('black', 900);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 12px 32px 12px 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 40px;
+}
+
+.navigation {
+  margin: 0 0 0 128px;
+}
+
+.user {
+  margin: 0 3rem 0 auto;
+}
+
+.feedback {
+  background-color: get-color('orange', 700);
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  color: get-color('white', 50);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.moreItem {
+  display: flex;
+  height: 28px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: transparent;
+  border-radius: 4px;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: get-color('grey', 100);
+  }
+
+}
+
+.dropdown {
+  width: 222px;
+  padding: 4px;
+}
+
+.title {
+  color: get-color('white', 100);
+  font-family: inherit !important;
+  opacity: 0.9;
+  padding-left: 24px;
+}

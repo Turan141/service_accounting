@@ -1,0 +1,59 @@
+// .modal{
+//     height: 500px;
+//     width: 500px;
+// }
+
+.tabWrapper{
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  p{
+    margin-bottom: 15px;
+  }
+  button{
+    // margin-left: 3rem;
+    
+    color:black;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 600;
+    border:none;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 7px;
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  select{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+}
+
+.getTime{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    border-top: 1px solid gray;
+    button{
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    p{
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,3471 @@
+{
+  "x-generator": "NSwag v13.7.0.0 (NJsonSchema v10.1.24.0 (Newtonsoft.Json v13.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "Utg Clients API",
+    "description": "The documentation Utg Clients API",
+    "version": "V1 (20/06/2022)"
+  },
+  "host": "clients.dev.utg.group",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/clients/Documents/{documentType}/GetById/{documentId}": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetById",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/GetById/{documentId}/Items": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetByIdItems",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/GetByNumber/{documentNumber}": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetByNumber",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "documentNumber",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/Find": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Find",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestPaginationOfDocumentFilter"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/Report/{reportCode}/{format}": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_ReportFind",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "reportCode",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "format",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestPaginationOfDocumentFilter"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Create",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "documentDto",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DocumentDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Delete",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "documentsIds",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Dispatcher"
+            ]
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Properties": {
+      "put": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Update",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "properties",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Properties/{property}": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Update2",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "property",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "value",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Add",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "items",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DocumentItemDto"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Items/{itemId}": {
+      "put": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Update3",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "itemDto",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DocumentItemUpdateDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/status/{status}": {
+      "put": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_ChangeStatus",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "status",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/status/{status}/properties": {
+      "put": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_ChangeStatus2",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "status",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "properties",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Items/{itemId}/{status}": {
+      "put": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_ChangeStatus3",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "status",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Actions": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetActions",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Skip",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Take",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfICollectionOfActionView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Actions/{actionType}": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetActions2",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "actionType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "Skip",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Take",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfICollectionOfActionView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/documentTypes": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetDocumentTypes",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "Skip",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Take",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfRequestPaginationOfDocumentTypeView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/documentStatuses": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetDocumentStatuses",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfRequestPaginationOfDocumentTypeView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Items/{documentItemId}": {
+      "delete": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Delete2",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "documentItemId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Items": {
+      "delete": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_Delete3",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "documentItemsId",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Attachments": {
+      "delete": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_DeleteAttachments",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "filesId",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "guid"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfAttachmentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_AddAttachments",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "file",
+            "name": "attachments",
+            "in": "formData",
+            "collectionFormat": "multi",
+            "x-nullable": true,
+            "items": {
+              "type": "file"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetAttachments",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Skip",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Take",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Attachments/{documentItemId}": {
+      "delete": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_DeleteAttachments2",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "documentItemId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "filesId",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "guid"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfAttachmentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Items/{itemId}/Attachments": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_AddAttachments2",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "file",
+            "name": "attachments",
+            "in": "formData",
+            "collectionFormat": "multi",
+            "x-nullable": true,
+            "items": {
+              "type": "file"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfDocumentView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/Items/{documentItemId}/Attachments": {
+      "get": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_GetAttachments2",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "documentItemId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Skip",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Take",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/lock": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_LockDocument",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Documents/{documentType}/{documentId}/unlock": {
+      "post": {
+        "tags": [
+          "Documents"
+        ],
+        "operationId": "Documents_UnlockDocument",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "documentType",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "documentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Files/{fileId}": {
+      "get": {
+        "tags": [
+          "Files"
+        ],
+        "operationId": "Files_LoadFile",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "fileId",
+            "in": "path",
+            "required": true,
+            "format": "guid",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/clients/Health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "operationId": "Health_Ping",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/clients/Health/db": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "operationId": "Health_PingDb",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/clients/Health/minio": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "operationId": "Health_PingMinio",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/clients/Import/Employees": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "operationId": "Import_ImportEmployees",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestImportOfEmployeeCreateDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponseImport"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Import/References": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "operationId": "Import_ImportReferences",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestImportOfReferenceCreateDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponseImport"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Import/References/{referenceMasterCode}/Properties": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "operationId": "Import_ImportReferences2",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "referenceMasterCode",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestImportOfReferencePropertyDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponseImport"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Import/References/{referenceMasterCode}/Items": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "operationId": "Import_ImportReferences3",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "referenceMasterCode",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestImportOfReferenceItemDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponseImport"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Import/DocumentTypes": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "operationId": "Import_AddMetadata",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestImportOfDocumentTypeDto"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/References/{referenceMasterCode}/Find": {
+      "post": {
+        "tags": [
+          "References"
+        ],
+        "operationId": "References_Get",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "referenceMasterCode",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestPaginationReference"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfReferenceView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/References": {
+      "get": {
+        "tags": [
+          "References"
+        ],
+        "operationId": "References_Get2",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "Skip",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "Take",
+            "in": "query",
+            "format": "int32",
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfReferenceView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "References"
+        ],
+        "operationId": "References_Delete",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "referencesMasterCodes",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfIEnumerableOfReferenceView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "Dispatcher"
+            ]
+          }
+        ]
+      }
+    },
+    "/clients/References/{referenceMasterCode}/Properties": {
+      "get": {
+        "tags": [
+          "References"
+        ],
+        "operationId": "References_GetProperties",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "referenceMasterCode",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfIEnumerableOfPropertyView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Users/Me": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Me",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfEmployeeView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Users/Find": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Find",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RequestPaginationOfEmployeeFilter"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfEmployeeView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/clients/Users/ByStaffId/{staffId}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Find2",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "staffId",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ResponseSuccessOfResponsePaginationOfEmployeeView"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "ResponseSuccessOfDocumentView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/DocumentView"
+        }
+      }
+    },
+    "DocumentView": {
+      "type": "object",
+      "required": [
+        "id",
+        "createdAt",
+        "lastModifiedAt",
+        "readOnly"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "number": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastModifiedAt": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemView"
+          }
+        },
+        "readOnly": {
+          "type": "boolean"
+        }
+      }
+    },
+    "DocumentItemView": {
+      "type": "object",
+      "required": [
+        "id",
+        "orderingPresentation",
+        "createdAt",
+        "lastMidifiedAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "orderingPresentation": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "status": {
+          "type": "string"
+        },
+        "masterCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdByFullName": {
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "type": "string"
+        },
+        "lastModifiedByFullName": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastMidifiedAt": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "childs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemView"
+          }
+        },
+        "additionalInfo": {
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/definitions/ReferenceView"
+        }
+      }
+    },
+    "ReferenceView": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "masterCode": {
+          "type": "string"
+        },
+        "parentMasterCode": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "orderPresentation": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "ResponseSuccessOfResponsePaginationOfDocumentView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ResponsePaginationOfDocumentView"
+        }
+      }
+    },
+    "ResponsePaginationOfDocumentView": {
+      "type": "object",
+      "required": [
+        "count",
+        "total"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentView"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "RequestPaginationOfDocumentFilter": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RequestPagination"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "$ref": "#/definitions/DocumentFilter"
+            }
+          }
+        }
+      ]
+    },
+    "DocumentFilter": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "string"
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "valuesFilter": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "valuesRangeFilter": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PropertyValueRangeFilter"
+          }
+        }
+      }
+    },
+    "PropertyValueRangeFilter": {
+      "type": "object",
+      "required": [
+        "name",
+        "from",
+        "to"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 3
+        },
+        "from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "RequestPagination": {
+      "type": "object",
+      "required": [
+        "skip",
+        "take"
+      ],
+      "properties": {
+        "skip": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": 0.0
+        },
+        "take": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": 0.0
+        }
+      }
+    },
+    "DocumentDto": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemDto"
+          }
+        }
+      }
+    },
+    "DocumentItemDto": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "status": {
+          "type": "string",
+          "pattern": "[A-Za-z]+"
+        },
+        "referenceMasterCode": {
+          "type": "string"
+        },
+        "additionalInfo": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "childs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemDto"
+          }
+        }
+      }
+    },
+    "DocumentItemUpdateDto": {
+      "type": "object",
+      "properties": {
+        "referenceMasterCode": {
+          "type": "string"
+        },
+        "additionalInfo": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ResponseSuccessOfICollectionOfActionView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ActionView"
+          }
+        }
+      }
+    },
+    "ActionView": {
+      "type": "object",
+      "required": [
+        "documentId",
+        "modified"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "documentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "documentItemid": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "modified": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "created": {
+          "type": "string"
+        },
+        "deleted": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/definitions/UserNames"
+        }
+      }
+    },
+    "UserNames": {
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "secondName": {
+          "type": "string"
+        },
+        "staffId": {
+          "type": "string"
+        }
+      }
+    },
+    "ResponseSuccessOfRequestPaginationOfDocumentTypeView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/RequestPaginationOfDocumentTypeView"
+        }
+      }
+    },
+    "RequestPaginationOfDocumentTypeView": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RequestPagination"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "$ref": "#/definitions/DocumentTypeView"
+            }
+          }
+        }
+      ]
+    },
+    "DocumentTypeView": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PropertyView"
+          }
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentTypeStatusView"
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemTypeView"
+          }
+        }
+      }
+    },
+    "PropertyView": {
+      "type": "object",
+      "required": [
+        "valueType",
+        "isRequired"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "valueType": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "isRequired": {
+          "type": "boolean"
+        },
+        "enumValues": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "refMasterCode": {
+          "type": "string"
+        }
+      }
+    },
+    "DocumentTypeStatusView": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "DocumentItemTypeView": {
+      "type": "object",
+      "required": [
+        "isRequiredItemReference"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "refMasterCode": {
+          "type": "string"
+        },
+        "isRequiredItemReference": {
+          "type": "boolean"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PropertyView"
+          }
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemTypeStatusView"
+          }
+        }
+      }
+    },
+    "DocumentItemTypeStatusView": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "ResponseSuccessOfResponsePaginationOfAttachmentView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ResponsePaginationOfAttachmentView"
+        }
+      }
+    },
+    "ResponsePaginationOfAttachmentView": {
+      "type": "object",
+      "required": [
+        "count",
+        "total"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AttachmentView"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "AttachmentView": {
+      "type": "object",
+      "required": [
+        "created"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "mimeType": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "created": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ProblemDetails": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "instance": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object",
+          "additionalProperties": {}
+        }
+      }
+    },
+    "ResponseSuccessOfResponseImport": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ResponseImport"
+        }
+      }
+    },
+    "ResponseImport": {
+      "type": "object",
+      "required": [
+        "itemsTotal",
+        "itemsSuccess",
+        "itemsError"
+      ],
+      "properties": {
+        "itemsTotal": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "itemsSuccess": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "itemsError": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "errors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "RequestImportOfEmployeeCreateDto": {
+      "type": "object",
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmployeeCreateDto"
+          }
+        }
+      }
+    },
+    "EmployeeCreateDto": {
+      "type": "object",
+      "required": [
+        "staffId"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "surname": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "patronymic": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "staffId": {
+          "type": "string",
+          "maxLength": 500,
+          "minLength": 1
+        },
+        "emplId": {
+          "type": "string",
+          "maxLength": 500
+        }
+      }
+    },
+    "RequestImportOfReferenceCreateDto": {
+      "type": "object",
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceCreateDto"
+          }
+        }
+      }
+    },
+    "ReferenceCreateDto": {
+      "type": "object",
+      "required": [
+        "name",
+        "masterCode"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 500,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "masterCode": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        "parentMasterCode": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        "orderPresentation": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": 0.0
+        }
+      }
+    },
+    "RequestImportOfReferencePropertyDto": {
+      "type": "object",
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferencePropertyDto"
+          }
+        }
+      }
+    },
+    "ReferencePropertyDto": {
+      "type": "object",
+      "required": [
+        "name",
+        "valueType",
+        "isRequired"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 500,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "valueType": {
+          "$ref": "#/definitions/PropertyValueType"
+        },
+        "isRequired": {
+          "type": "boolean"
+        },
+        "enumValues": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "refMasterCode": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        }
+      }
+    },
+    "PropertyValueType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Integer",
+        "Double",
+        "Boolean",
+        "String",
+        "DateTime",
+        "Enum",
+        "Ref",
+        "Employee"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "RequestImportOfReferenceItemDto": {
+      "type": "object",
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceItemDto"
+          }
+        }
+      }
+    },
+    "ReferenceItemDto": {
+      "type": "object",
+      "required": [
+        "name",
+        "masterCode",
+        "values"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 500,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "masterCode": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "orderPresentation": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": 0.0
+        }
+      }
+    },
+    "RequestImportOfDocumentTypeDto": {
+      "type": "object",
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentTypeDto"
+          }
+        }
+      }
+    },
+    "DocumentTypeDto": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentStatusDto"
+          }
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentTypePropertyDto"
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemTypeDto"
+          }
+        }
+      }
+    },
+    "DocumentStatusDto": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        }
+      }
+    },
+    "DocumentTypePropertyDto": {
+      "type": "object",
+      "required": [
+        "name",
+        "valueType",
+        "isRequired"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "valueType": {
+          "$ref": "#/definitions/PropertyValueType"
+        },
+        "enumValues": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "refMasterCode": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "DocumentItemTypeDto": {
+      "type": "object",
+      "required": [
+        "name",
+        "isRequiredItemReference"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "refMasterCode": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        "isRequiredItemReference": {
+          "type": "boolean"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemTypePropertyDto"
+          }
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocumentItemStatusDto"
+          }
+        }
+      }
+    },
+    "DocumentItemTypePropertyDto": {
+      "type": "object",
+      "required": [
+        "name",
+        "valueType",
+        "isRequired"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "valueType": {
+          "$ref": "#/definitions/PropertyValueType"
+        },
+        "enumValues": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "refMasterCode": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "DocumentItemStatusDto": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "[A-Za-z]+"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000,
+          "minLength": 1
+        }
+      }
+    },
+    "ResponseSuccessOfResponsePaginationOfReferenceView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ResponsePaginationOfReferenceView"
+        }
+      }
+    },
+    "ResponsePaginationOfReferenceView": {
+      "type": "object",
+      "required": [
+        "count",
+        "total"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceView"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "RequestPaginationReference": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RequestPagination"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "$ref": "#/definitions/ReferenceFilter"
+            },
+            "valuesFilter": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "valuesRangeFilter": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PropertyValueRangeFilter"
+              }
+            },
+            "propertiesSearch": {
+              "$ref": "#/definitions/PropertiesSearch"
+            }
+          }
+        }
+      ]
+    },
+    "ReferenceFilter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "itemMasterCode": {
+          "type": "string"
+        }
+      }
+    },
+    "PropertiesSearch": {
+      "type": "object",
+      "required": [
+        "properties",
+        "value"
+      ],
+      "properties": {
+        "properties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fullMatch": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ResponseSuccessOfIEnumerableOfPropertyView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PropertyView"
+          }
+        }
+      }
+    },
+    "ResponseSuccessOfIEnumerableOfReferenceView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceView"
+          }
+        }
+      }
+    },
+    "ResponseSuccessOfEmployeeView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/EmployeeView"
+        }
+      }
+    },
+    "EmployeeView": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "patronymic": {
+          "type": "string"
+        },
+        "staffId": {
+          "type": "string"
+        }
+      }
+    },
+    "ResponseSuccessOfResponsePaginationOfEmployeeView": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ResponsePaginationOfEmployeeView"
+        }
+      }
+    },
+    "ResponsePaginationOfEmployeeView": {
+      "type": "object",
+      "required": [
+        "count",
+        "total"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmployeeView"
+          }
+        },
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "RequestPaginationOfEmployeeFilter": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RequestPagination"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "$ref": "#/definitions/EmployeeFilter"
+            }
+          }
+        }
+      ]
+    },
+    "EmployeeFilter": {
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "JWT": {
+      "type": "apiKey",
+      "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}

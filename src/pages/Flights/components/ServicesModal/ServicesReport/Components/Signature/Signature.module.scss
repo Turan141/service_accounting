@@ -1,0 +1,42 @@
+@import "~@assets/styles/colors.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 213px;
+    height: 155px;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.imgContainer {
+    width: 124px;
+    height: 124px;
+}
+
+.img {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+}
+
+.text, .name {
+    text-align: left;
+    font-style: normal;
+    color: get-color("black", 600);
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.name {
+    color: get-color("black", 900) !important;
+}
+
+.line {
+    border-top: 1px solid #e7f1fa;
+}

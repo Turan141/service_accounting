@@ -1,0 +1,44 @@
+.wrapper {
+    height: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    span {
+        font-size: 10px;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 15px;
+
+    .cancel {
+        background-color: rgba(0, 0, 0, 0);
+        color: #9cb1c7;
+    }
+}
+
+.iconSetting {
+    margin: 0 0 0 20px;
+    cursor: pointer;
+}
+
+.scrollBar {
+    height: 400px;
+}

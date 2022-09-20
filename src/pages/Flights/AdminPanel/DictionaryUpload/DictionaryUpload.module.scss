@@ -1,0 +1,367 @@
+.DictionaryUpload {
+  background-color: #dcdcdc;
+  border-bottom: 3px solid #d3d3d3;
+  min-height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem;
+  h2 {
+    text-align: left;
+    margin-right: 1rem;
+    width: 15rem;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    position: absolute;
+    left: 1.5rem;
+    font-weight: 400;
+  }
+  .uploadFilesDisabled {
+    background-color: gray;
+    cursor: default;
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 7rem;
+    text-align: center;
+    line-height: 1rem;
+    color: white;
+  }
+  .uploadFiles {
+    background-color: rgb(46, 110, 230);
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 7rem;
+    text-align: center;
+    line-height: 1rem;
+    cursor: pointer;
+    color: white;
+  }
+  .customUploadButton {
+    background-color: rgb(46, 110, 230);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.77rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    input[type='file'] {
+      display: none;
+    }
+  }
+}
+
+.cols {
+  background-color: #dcdcdc;
+  border-bottom: 3px solid #d3d3d3;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+
+  p {
+    width: 120px;
+    text-align: center;
+
+    &:first-child {
+      width: 250px;
+    }
+  }
+}
+
+.notExist {
+  color: rgb(162, 158, 158);
+}
+
+.removeArtifact {
+  background-color: transparent;
+  border: 1.5px solid #dc3545;
+  border-radius: 5px;
+  color: #dc3545;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.colsExistense {
+  gap: 4rem;
+  background-color: #dcdcdc;
+  border-bottom: 3px solid #d3d3d3;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  font-size: 0.9rem;
+  text-align: left;
+  p {
+    width: 12rem;
+    margin-left: 4rem;
+  }
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.flightSpinner {
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  box-shadow: 0px 0px 20px 0px black;
+  border-radius: 15px;
+}
+
+.colsArtefacts {
+  background-color: #dcdcdc;
+  border-bottom: 3px solid #d3d3d3;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  gap: 20px;
+
+  p {
+    width: 5rem;
+    text-align: left;
+
+    &:first-child {
+      width: 200px;
+    }
+    &:nth-child(2) {
+      width: 8rem;
+      text-align: center;
+    }
+    &:nth-child(3) {
+      width: 8rem;
+      text-align: center;
+    }
+    &:nth-child(4) {
+      width: 6rem;
+    }
+    &:nth-child(5) {
+      width: 7rem;
+      padding-right: 1rem;
+    }
+  }
+}
+.modal {
+  button {
+    z-index: 999;
+  }
+}
+.UploadedFiles {
+  max-height: 80%;
+  overflow-y: hidden;
+  margin: 0 1rem;
+  overflow-y: hidden;
+  .fileList {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    max-height: 380px;
+    overflow-y: scroll;
+    li {
+      border: 1px solid rgba(gray, 0.3);
+      border-radius: 5px;
+      margin: 2px;
+      // padding-right: 4rem;
+      min-height: 3.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.3rem;
+      gap: 1rem;
+      text-align: left;
+      background-color: white;
+      .insivibleBtn {
+        background-color: transparent;
+        color: transparent;
+        border: none;
+      }
+      .disabledBtn {
+        background-color: transparent;
+        border: none;
+        color: transparent;
+        padding: 0.5rem 1rem;
+        cursor: default;
+        &:hover {
+          cursor: default;
+        }
+      }
+      button {
+        color:black;
+        background-color: transparent;
+        text-decoration: underline;
+        font-weight: 600;
+        border:none;
+        border-radius: 5px;
+        padding: 5px;
+        &:hover {
+          cursor: pointer;
+          color:green;
+        }
+      }
+      &:hover {
+        overflow: visible;
+        white-space: normal;
+        word-wrap: break-word;
+        height: auto;
+      }
+      p {
+        overflow: hidden;
+        word-wrap: normal;
+        text-align: left;
+        &:first-child {
+          width: 250px;
+
+        }
+        &:nth-child(2) {
+          width:6rem;
+          text-align: center;
+        }
+        &:nth-child(3) {
+          width: 10rem;
+          text-align: center;
+        }
+        &:nth-child(4) {
+          width: 6rem;
+        }
+        &:nth-child(6) {
+          width: 6rem;
+        }
+        &:nth-child(7) {
+          width: 6rem;
+        }
+      }
+    }
+  }
+}
+
+.deleted {
+  // text-decoration: line-through;
+  color: rgb(162, 158, 158);
+  p {
+    text-decoration: line-through;
+  }
+  button {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    text-decoration: none !important;
+  }
+}
+
+.NoFiles {
+  border: 2px solid #d3d3d3;
+  color: #858282;
+  border-radius: 15px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  height: 2.5rem;
+  padding: 2rem;
+}
+
+.tabs {
+  background-color: #dcdcdc;
+}
+
+.importFiles {
+  background-color: rgb(46, 110, 230);
+  border: none;
+  border-radius: 3px;
+  height: 2.5rem;
+  width: 15rem;
+  text-align: center;
+  line-height: 1rem;
+  cursor: pointer;
+  color: white;
+  margin-right: 2rem;
+}
+
+.healthDiv {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .header {
+    border: 1px solid gray;
+    background-color: #dcdcdc;
+    color: #858282;
+    padding: 0.2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10rem;
+    width: 100%;
+    box-shadow: 0px 1px 7px 0px #888888;
+  }
+  .healthCheck {
+    svg{
+      width: 200px;
+      transform: scale(0.7);
+    }
+    width: 100%;
+    border-bottom: 1px solid rgba(67, 67, 67, 0.2);
+    .healthText {
+      width: 200px;
+      display: flex;
+      font-weight: 500;
+      text-align: left;
+      height: 50px;
+      padding: 1rem;
+      align-items: center;
+      // justify-content: center;
+    }
+    display: flex;
+    align-items: center;
+
+    justify-content: space-around;
+
+    .heartRate {
+      width: 150px;
+      height: 73px;
+      position: relative;
+      margin: 20px 0;
+    }
+    .fadeIn {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      top: 0;
+      right: 0;
+      animation: heartRateIn 2.5s linear infinite;
+    }
+    @keyframes heartRateIn {
+      0% {
+        width: 100%;
+      }
+      50% {
+        width: 0;
+      }
+      100% {
+        width: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import "~@assets/styles/colors.scss";
+
+.imgContainer {
+    width: 124px;
+    height: 124px;
+}
+
+.img {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+}
+.root {
+    margin: 0 !important;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+.imgWrapper {
+    width: 700px;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.rootImg {
+    width: 700px;
+    height: 700px;
+    object-fit: contain;
+}
+.author,
+.label {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.description,
+.author {
+    padding: 10px 0;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: get-color("white", 50);
+    text-align: left;
+    width: 400px;
+}
+
+.close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10001;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.description {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.author, .label {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.description,
+.author {
+    padding: 10px 0;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: get-color("white", 50);
+    text-align: left;
+    width: 400px;
+}

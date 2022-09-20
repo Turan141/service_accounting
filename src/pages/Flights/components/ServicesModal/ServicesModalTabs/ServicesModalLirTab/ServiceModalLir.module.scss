@@ -1,0 +1,190 @@
+.ModalLir {
+  background-color: white;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 2rem;
+  border-radius: 25px;
+  .lirs {
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+    overflow-x: hidden;
+    margin-top: 20px;
+    width: 100%;
+    float: right;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+      border-radius: 20px;
+      // border: 1px solid transparent;
+      background-clip: content-box;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #a8bbbf;
+    }
+  }
+  .inputForm {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    // background-color: #f5f9ff;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    form {
+      display: flex;
+    }
+    button {
+      border: none;
+      background-color: #3964d8;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+    }
+    input {
+      border: 1px solid rgba(128, 128, 128, 0.222);
+      background-color: #f5f9ff;
+      padding: 10px 5px;
+      width: 100%;
+      border-radius: 5px;
+      margin-right: 2rem;
+      font-size: 1rem;
+      &:focus {
+        outline: none;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+  .LirWindow {
+    padding: 1rem;
+    margin: 0.5rem;
+    margin-left: auto;
+    background-color: #3964d8;
+    width: 25rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+    line-height: 25px;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    word-break: break-all;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+      border-radius: 20px;
+      // border: 1px solid transparent;
+      background-clip: content-box;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #a8bbbf;
+    }
+    h1 {
+      font-size: 0.8rem;
+      margin-right: auto;
+      color: rgb(203, 203, 203);
+    }
+    h2 {
+      // margin-left: auto;
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin-top: 5px;
+      width: 90%;
+    }
+    p {
+      font-size: 0.8rem;
+      text-align: right;
+      margin-left: auto;
+      // padding-top: 15px;
+      font-weight: 300;
+      position: relative;
+      top: 5px;
+    }
+  }
+}
+
+.telegramSelect {
+  color: rgb(73, 71, 71);
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.222);
+  background-color: #f5f9ff;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-right: 2rem;
+  font-size: 1rem;
+  width: 10rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+    serif, 'Times New Roman', Times, serif;
+  outline: none;
+
+  .telegramOption {
+    display: flex;
+  }
+}
+
+.loader {
+  width: 320px;
+  height: 150px;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  background-image: linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 80%
+    ),
+    linear-gradient(#ddd 56px, transparent 0),
+    linear-gradient(#ddd 24px, transparent 0),
+    linear-gradient(#ddd 18px, transparent 0),
+    linear-gradient(#ddd 66px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px,
+    290px 56px;
+  background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+  100% {
+    background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+}

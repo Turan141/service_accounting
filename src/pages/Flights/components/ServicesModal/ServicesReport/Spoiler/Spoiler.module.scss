@@ -1,0 +1,55 @@
+.root, .rootMin {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.header {
+    display: flex;
+    svg {
+        margin: 0 0 0 5px;
+    }
+}
+
+.rootMin {
+    height: 80px !important;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.spoilerName {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.containerForm {
+    height: auto;
+    width: 100%;
+}

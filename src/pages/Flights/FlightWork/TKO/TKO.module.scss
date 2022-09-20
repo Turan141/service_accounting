@@ -1,0 +1,54 @@
+.main{
+
+}
+.title{
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.type{
+  padding: 18px 16px 16px  16px;
+}
+.executor{
+  padding: 0 16px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.elem {
+  width: 120px;
+  padding: 8px 0;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+.line{
+  border-top: 1px solid  #E7F1FA;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 15px;
+
+  .cancel {
+    background-color: rgba(0,0,0,0);
+    color: #9CB1C7;
+  }
+
+}
+

@@ -1,0 +1,24 @@
+@import '../../assets/styles/colors';
+
+
+.time {
+  font-size: 16px;
+  background-color: white;
+  //padding: 10px;
+  border: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 15px;
+  right: 24px;
+
+  &::-webkit-calendar-picker-indicator {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    color: get-color('blue', 100);
+    background-blend-mode: difference;
+  }
+}

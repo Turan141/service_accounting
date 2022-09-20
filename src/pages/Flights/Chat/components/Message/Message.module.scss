@@ -1,0 +1,60 @@
+.rootIncoming,
+.rootOutgoing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rootIncoming {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rootOutgoing {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.messageOutgoingWrapper,
+.messageIncomingWrapper {
+    padding: 20px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageOutgoingWrapper {
+    border-radius: 10px 10px 10px 1px;
+    background: #e7f1fa;
+}
+
+.messageIncomingWrapper {
+    background: #3964d8;
+    border-radius: 10px 10px 1px 10px;
+}
+
+.outgoingText,
+.incomingtext {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.outgoingText {
+    color: #343d4f;
+}
+
+.incomingText {
+    color: #ffffff;
+}
+
+.timeContainer {
+    padding: 10px 0;
+}
+
+.time {
+    color: #9cb1c7;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+}

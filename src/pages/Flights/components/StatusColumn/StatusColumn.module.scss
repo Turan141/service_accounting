@@ -1,0 +1,30 @@
+@import "src/assets/styles/colors";
+
+.statusColumn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.icon {
+  margin-right: 4px;
+  display: flex;
+}
+
+.orange {
+  svg {
+    circle {
+      fill: get-color('orange', 100);
+    }
+  }
+}
+
+
+
+.blue {
+  svg {
+    circle {
+      fill: get-color('blue', 100);
+    }
+  }
+}

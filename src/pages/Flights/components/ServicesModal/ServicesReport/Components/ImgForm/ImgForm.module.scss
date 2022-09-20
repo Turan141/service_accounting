@@ -1,0 +1,76 @@
+@import "~@assets/styles/colors.scss";
+
+.container {
+    width: 124px;
+}
+
+.imgContainer {
+    width: 124px;
+    height: 124px;
+}
+
+.img {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.zoom {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.comment,
+.date, .label {
+    text-align: left;
+    font-style: normal;
+    color: get-color("black", 600);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.comment {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.imgWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rootImg {
+    width: 80vw;
+    height: 80vh;
+    object-fit: contain;
+}
+
+
+.author, .label {
+    font-size: 10px;
+    line-height: 14px;
+}
+

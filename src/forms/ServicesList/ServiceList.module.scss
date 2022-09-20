@@ -1,0 +1,33 @@
+@import '../../assets/styles/colors';
+
+.list {
+  display: flex;
+  flex: 1;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  border-radius: 7px;
+  height: 40px;
+  transition: 0.3s ease;
+  margin-bottom: 7px;
+  background-color: get-color('white');
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 3px -1px,
+  //   rgba(0, 0, 0, 0.3) 0px 1px 1px -1px;
+  &:hover {
+    transition: 0.3s ease;
+    background-color: rgba(128, 128, 128, 0.1);
+  }
+}
+
+.checkbox {
+  label {
+    span {
+      span {
+        border-radius: 50px !important;
+      }
+    }
+  }
+}

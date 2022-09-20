@@ -1,0 +1,48 @@
+.search {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 52px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.form-control-division {
+  flex: 1 0 auto;
+}
+
+.form-control-position {
+  flex: 1 0 auto;
+}
+
+.form-control-from {
+  flex: 1 0 auto;
+  margin-right: 16px;
+}
+
+.form-control-before {
+  flex: 1 0 auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 15px;
+
+  .cancel {
+    background-color: rgba(0,0,0,0);
+    color: #9CB1C7;
+  }
+
+}
+
+.iconSetting {
+  margin: 0 0 0 20px;
+  cursor: pointer;
+}

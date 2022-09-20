@@ -1,0 +1,399 @@
+.MainMobileApp {
+  display: flex;
+  .appUploadSearch {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid black;
+    min-height: 500px;
+    width: 50%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    .appUpload {
+      display: flex;
+      flex-direction: column;
+      min-height: 200px;
+      //   border: 2px solid rgba(128, 128, 128, 0.268);
+      border-radius: 15px;
+      padding: 1rem;
+      min-width: 300px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      p {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      input[type='file'] {
+        display: none;
+      }
+      .upload {
+        // border: 1px solid #ccc;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: inline-block;
+        padding: 2rem 0.5rem;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.2rem;
+        color: gray;
+      }
+      .button30 {
+        align-items: center;
+        appearance: none;
+        // width: 15rem;
+        margin-top: auto;
+        background-color: #fcfcfd;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+          rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+          #d6d6e7 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #36395a;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: 'JetBrains Mono', monospace;
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow 0.15s, transform 0.15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow, transform;
+        font-size: 18px;
+      }
+
+      .button30:focus {
+        box-shadow: #d6d6e7 0 0 0 1.5px inset,
+          rgba(45, 35, 66, 0.4) 0 2px 4px,
+          rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+          #d6d6e7 0 -3px 0 inset;
+      }
+
+      .button30:hover {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+          rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+          #d6d6e7 0 -3px 0 inset;
+        transform: translateY(-2px);
+      }
+
+      .button30:active {
+        box-shadow: #d6d6e7 0 3px 7px inset;
+        transform: translateY(2px);
+      }
+    }
+    .appSearch {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+      min-width: 300px;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      .searchFields {
+        display: flex;
+      }
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      input[type='text'] {
+        margin: 3px;
+        outline: none;
+        min-width: 220px;
+        font-size: 0.8rem;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(128, 128, 128, 0.177);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        svg {
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .viewAllApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-right: 15px;
+    // min-height: 520px;
+    border-radius: 15px;
+    .button4 {
+      appearance: none;
+      background-color: white;
+      border: 1px solid rgba(27, 31, 35, 0.15);
+      border-radius: 6px;
+      box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+        rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+      box-sizing: border-box;
+      color: #24292e;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system, system-ui, 'Segoe UI', Helvetica,
+        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      padding: 6px 16px;
+      position: relative;
+      transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      white-space: nowrap;
+      word-wrap: break-word;
+    }
+    .button4__top {
+      background-color: white;
+      border: 1px solid rgba(27, 31, 35, 0.15);
+      border-radius: 6px;
+      box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+        rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+      color: #24292e;
+      cursor: pointer;
+      font-family: -apple-system, system-ui, 'Segoe UI', Helvetica,
+        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      padding: 6px 16px;
+      transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+      margin-left: 20px;
+      position: relative;
+      top: 10px;
+      // margin-top: 20px;
+    }
+
+    .button4:hover {
+      background-color: #f3f4f6;
+      text-decoration: none;
+      transition-duration: 0.1s;
+    }
+
+    .button4:disabled {
+      background-color: #fafbfc;
+      border-color: rgba(27, 31, 35, 0.15);
+      color: #959da5;
+      cursor: default;
+    }
+
+    .button4__top:disabled {
+      background-color: #fafbfc;
+      border-color: rgba(27, 31, 35, 0.15);
+      color: #959da5;
+      cursor: default;
+    }
+
+    .button4:active {
+      background-color: #edeff2;
+      box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+      transition: none 0s;
+    }
+
+    .button4:focus {
+      outline: 1px transparent;
+    }
+
+    .button4:before {
+      display: none;
+    }
+
+    .button4:-webkit-details-marker {
+      display: none;
+    }
+    .viewAllAppList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 495px;
+      border: 1px solid rgba(128, 128, 128, 0.177);
+      justify-content: flex-start;
+      gap: 150px;
+      border-radius: 15px;
+      min-width: 90%;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      p {
+        text-align: center;
+        width: 400px;
+        padding-top: 25px;
+        color: gray;
+      }
+    }
+  }
+}
+
+.insertedFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  border-top: 1px dotted gray;
+  .imgAndDelete {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin-left: 15px;
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      &:hover {
+        cursor: pointer;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+          rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      }
+    }
+  }
+  p {
+    padding-top: 10px;
+    width: 250px;
+  }
+}
+
+.loader {
+  width: 70%;
+  height: 16px;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  font-size: 30px;
+  background-size: 1em 1em;
+  box-sizing: border-box;
+  animation: barStripe 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes barStripe {
+  0% {
+    background-position: 1em 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.apklistDiv {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  min-height: 520px;
+  border: 1px solid rgba(128, 128, 128, 0.177);
+  border-radius: 15px;
+  .apklist {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-height: 27rem;
+    max-height: 27rem;
+    overflow-y: scroll;
+    margin-top: 20px;
+    min-width: 32rem;
+    li {
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      border-radius: 5px;
+      padding: 10px 5px;
+      margin: 5px 0;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      .itemButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        button {
+          background-color: #ffffff;
+          border: 0;
+          border-radius: 0.5rem;
+          box-sizing: border-box;
+          color: #111827;
+          font-family: 'Inter var', ui-sans-serif, system-ui,
+            -apple-system, system-ui, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+            'Noto Color Emoji';
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 1.25rem;
+          padding: 0.35rem 1rem;
+          text-align: center;
+          text-decoration: none #d1d5db solid;
+          text-decoration-thickness: auto;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          cursor: pointer;
+          &:first-child {
+            color: green;
+          }
+          &:nth-child(2) {
+            color: red;
+          }
+          &:nth-child(3) {
+            color: black;
+          }
+        }
+      }
+      p {
+        margin: 7px;
+      }
+    }
+  }
+}
+.actual {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(128, 128, 128, 0.353);
+  border-radius: 15px;
+  margin-top: 15px;
+  padding: 5px;
+  p {
+    margin: 0 !important;
+    padding: 5px 0 10px 0 !important;
+    text-decoration: underline;
+  }
+}
+.showActual{
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.307) !important;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 15px;
+}

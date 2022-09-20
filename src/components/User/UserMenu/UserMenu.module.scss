@@ -1,0 +1,27 @@
+.root {
+  min-width: 240px;
+  .profiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    &.disabled {
+      pointer-events: none;
+      .more {
+        display: none;
+      }
+    }
+    .more {
+      padding: 0 10px;
+
+      &:hover {
+        color: get-color('grey', 600);
+      }
+    }
+  }
+}
+.mainDiv{
+  z-index: 999;
+}

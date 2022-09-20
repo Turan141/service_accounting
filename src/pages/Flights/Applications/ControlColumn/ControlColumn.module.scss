@@ -1,0 +1,17 @@
+@import './src/assets/styles/colors';
+
+.button{
+   margin-right: 0.4rem;
+   align-items: center;
+   align-content: center;
+   position: relative;
+   transform: scale(1.5);
+}
+
+.menu {
+   background-color: get-color('white', 100);
+   z-index: 2;
+   transform: scale(0.7);
+   transform-origin: 100% -50%;
+}
+

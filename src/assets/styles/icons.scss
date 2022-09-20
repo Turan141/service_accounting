@@ -1,0 +1,336 @@
+@font-face {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../icons/icons.eot') format('embedded-opentype');
+  src: url('../icons/icons.svg') format('svg');
+  src: url('../icons/icons.ttf') format('truetype');
+  src: url('../icons/icons.woff') format('woff2');
+}
+
+i {
+  &[class^='icon-'],
+  &[class*=' icon-'] {
+    font-family: 'icons', sans-serif !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+i.icon- {
+  &add:before {
+    content: '\e900';
+  }
+
+  &administration:before {
+    content: '\e901';
+  }
+
+  &agreed:before {
+    content: '\e902';
+  }
+
+  &angle-down:before {
+    content: '\e903';
+  }
+
+  &angle-up:before {
+    content: '\e904';
+  }
+
+  &applications:before {
+    content: '\e905';
+  }
+
+  &archiv:before {
+    content: '\e906';
+  }
+
+  &archive-circle:before {
+    content: '\e907';
+  }
+
+  &attachment:before {
+    content: '\e908';
+  }
+
+  &block-circle:before {
+    content: '\e909';
+  }
+
+  &calendar:before {
+    content: '\e90a';
+  }
+
+  &chevron-left:before {
+    content: '\e90b';
+  }
+
+  &chevron-right:before {
+    content: '\e90c';
+  }
+
+  &clock-circle:before {
+    content: '\e90d';
+  }
+
+  &closed:before {
+    content: '\e90e';
+  }
+
+  &closed-circle:before {
+    content: '\e90f';
+  }
+
+  &company:before {
+    content: '\e910';
+  }
+
+  &complex:before {
+    content: '\e911';
+  }
+
+  &delete:before {
+    content: '\e912';
+  }
+
+  &department:before {
+    content: '\e913';
+  }
+
+  &division:before {
+    content: '\e914';
+  }
+
+  &document:before {
+    content: '\e915';
+  }
+
+  &done:before {
+    content: '\e916';
+  }
+
+  &done-circle:before {
+    content: '\e917';
+  }
+
+  &draft-circle:before {
+    content: '\e918';
+  }
+
+  &edit:before {
+    content: '\e919';
+  }
+
+  &email:before {
+    content: '\e91a';
+  }
+
+  &exit:before {
+    content: '\e91b';
+  }
+
+  &eye:before {
+    content: '\e91c';
+  }
+
+  &eye-slash:before {
+    content: '\e91d';
+  }
+
+  &further:before {
+    content: '\e91e';
+  }
+
+  &histoty:before {
+    content: '\e91f';
+  }
+
+  &home:before {
+    content: '\e920';
+  }
+
+  &home-1:before {
+    content: '\e921';
+  }
+
+  &list:before {
+    content: '\e922';
+  }
+
+  &message:before {
+    content: '\e923';
+  }
+
+  &message-profile:before {
+    content: '\e924';
+  }
+
+  &money:before {
+    content: '\e925';
+  }
+
+  &more:before {
+    content: '\e926';
+  }
+
+  &more-circle:before {
+    content: '\e927';
+  }
+
+  &password:before {
+    content: '\e928';
+  }
+
+  &phone:before {
+    content: '\e929';
+  }
+
+  &profile:before {
+    content: '\e92a';
+  }
+
+  &roles:before {
+    content: '\e92b';
+  }
+
+  &save:before {
+    content: '\e92c';
+  }
+
+  &search:before {
+    content: '\e92d';
+  }
+
+  &service:before {
+    content: '\e92e';
+  }
+
+  &setting:before {
+    content: '\e92f';
+  }
+
+  &settings:before {
+    content: '\e930';
+  }
+
+  &shevron-down:before {
+    content: '\e931';
+  }
+
+  &shevron-up:before {
+    content: '\e932';
+  }
+
+  &time:before {
+    content: '\e933';
+  }
+
+  &to-work:before {
+    content: '\e934';
+  }
+
+  &type:before {
+    content: '\e935';
+  }
+
+  &unload:before {
+    content: '\e936';
+  }
+  &user:before {
+    content: '\e937';
+  }
+  &user-circle:before {
+    content: '\e938';
+  }
+
+  &warning:before {
+    content: '\e939';
+  }
+
+  &ourses:before {
+    content: '\e93a';
+  }
+
+  &claim-active:before {
+    content: '\e93b';
+  }
+
+  &travel:before {
+    content: '\e93c';
+  }
+
+  &transportation:before {
+    content: '\e93d';
+  }
+
+  &protection:before {
+    content: '\e93e';
+  }
+
+  &building:before {
+    content: '\e93f';
+  }
+
+  &directory-of-contacts:before {
+    content: '\e940';
+  }
+
+  &document-section:before {
+    content: '\e941';
+  }
+
+  &document-see:before {
+    content: '\e942';
+  }
+
+  &emails:before {
+    content: '\e943';
+  }
+
+  &external-audit:before {
+    content: '\e944';
+  }
+
+  &internal-audit:before {
+    content: '\e945';
+  }
+
+  &leadership:before {
+    content: '\e946';
+  }
+
+  &legal:before {
+    content: '\e947';
+  }
+
+  &money-1:before {
+    content: '\e948';
+  }
+
+  &monitoring:before {
+    content: '\e949';
+  }
+
+  &news:before {
+    content: '\e94a';
+  }
+
+  &question:before {
+    content: '\e94b';
+  }
+
+  &tabel:before {
+    content: '\e94c';
+  }
+  &clock:before {
+    content: '\e94e';
+  }
+}

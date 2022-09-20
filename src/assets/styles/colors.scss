@@ -1,0 +1,108 @@
+$utg-palette: (
+  'black': (
+    50: #F0F9FF,
+    100: #E9F3FF,
+    200: #E1EBFF,
+    300: #D2DBF2,
+    400: #AEB8CE,
+    500: #8F98AD,
+    600: #677084,
+    700: #535C6F,
+    800: #343D4F,
+    900: #131D2D,
+  ),
+  'grey': (
+    50: #F5F9FF,
+    100: #E7F1FA,
+    200: #DBE7F4,
+    300: #CBDBED,
+    400: #BBCFE4,
+    500: #ADC3DB,
+    600: #889AAC,
+    700: #889aac,
+    800: #788594,
+    900: #636E7A,
+  ),
+  'white': (
+    50: #FFFFFF,
+    100: #FAFAFA,
+    200: #F5F5F5,
+    300: #F0F0F0,
+    400: #DEDEDE,
+    500: #C2C2C2,
+    600: #979797,
+    700: #818181,
+    800: #606060,
+    900: #3C3C3C,
+  ),
+  'blue': (
+    50: #E4F3FF,
+    100: #BEDFFF,
+    200: #94CCFF,
+    300: #69B8FF,
+    400: #4BA7FF,
+    500: #3798FF,
+    600: #3A89FF,
+    700: #3A76EA,
+    800: #3964D8,
+    900: #3643B8,
+  ),
+  'green': (
+    50: #EDFAE8,
+    100: #D1F2C6,
+    200: #B2E9A1,
+    300: #90DF7A,
+    400: #74D85A,
+    500: #55D039,
+    600: #44C031,
+    700: #28AB27,
+    800: #00971C,
+    900: #00730B,
+  ),
+  'orange': (
+    50: #FEF8E1,
+    100: #FDEBB4,
+    200: #FCDE84,
+    300: #FCD253,
+    400: #FBC731,
+    500: #FABE1C,
+    600: #FAB017,
+    700: #F99D15,
+    800: #F88D13,
+    900: #F76F11,
+  ),
+  'red': (
+    50: #FEEAEF,
+    100: #FECAD3,
+    200: #EE949C,
+    300: #E46A75,
+    400: #EF4354,
+    500: #F5283B,
+    600: #ED1A3D,
+    700: #D30B33,
+    800: #C7002C,
+    900: #B80020,
+  ),
+);
+
+$utg-opacity: (
+  'light': 0.8,
+  'dark': 0.2,
+);
+
+@function get-color($name, $variant: 50, $opacity: 1) {
+  $color: null;
+  $color-spectrum: map-get($utg-palette, $name);
+
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  $alpha: if(type-of($opacity) == 'number', $opacity, map-get($utg-opacity, $opacity));
+
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}

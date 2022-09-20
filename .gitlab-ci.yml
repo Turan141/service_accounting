@@ -1,0 +1,72 @@
+variables:
+  SW_STACK_NAME: "clients-frontend"
+  DOCKER_FILE_LOCATION: .
+
+stages: #######№ шаги по которым ходит пайплайн > выполняются друг за другом
+  - build_project # производим build проекта используя значение image как билд внутри dind, сохраняя cach и artefatcs
+  - test_project # производим тесты проекта на основании cach + artifacts
+  - prepare
+  - release
+  - make_image
+  - deploy_to_develop
+  - deploy_to_test
+  - deploy_to_main
+
+cache:
+  paths:
+    - node_modules
+    - build
+
+include:
+  - project: 'templates/cicd-templates'
+    ref: v1.0.0
+    file:
+      ## - '.gitlab/ci_develop/auto-release.yml'
+      - '.gitlab/ci_develop/deploy-to-prod.yml'
+      - '.gitlab/ci_develop/deploy-to-test.yml'
+      - '.gitlab/ci_develop/deploy-to-develop.yml'
+      - '.gitlab/ci_develop/release-image_test.yml'
+
+
+# -----------------------------------Begin compile-----------------------------------------------------
+compile:
+  stage: build_project
+  image: node:lts-alpine
+  before_script:
+    - npm cache clean --force
+    # - npm config set fetch-retry-mintimeout 130000
+    # - npm config set fetch-retry-maxtimeout 5180000
+    # - npm config set fetch-timeout 5900000
+    # - npm config set fetch-retries 15
+    # - npm config set cache-min 3600
+    # - npm config ls -l
+    #- npm config set fetch-timeout 2900000
+    #- npm config set timeout 2240000
+    - npm cache verify
+    - npm install yarn --legacy-peer-deps
+    # - npm cache verify
+    # - npm install yarn --legacy-peer-deps || true
+    # - npm cache verify
+    # - npm install yarn --legacy-peer-deps
+    - yarn
+  script:
+    - yarn build
+  tags:
+    - build
+  only:
+    - develop
+    - test
+    - master
+
+# --------------------------------------Begin tests-----------------------------------------------------
+#tests:
+#  stage: test_project
+#  image: твой имидж
+#  script:
+#    - echo "твой скрипт"
+#  tags:
+#    - build
+#  only:
+#    - develop
+#    - tags
+

@@ -1,0 +1,20 @@
+
+.header{
+    h1{
+        font-weight: 600;
+    }
+}
+.report{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+}

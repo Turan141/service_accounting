@@ -1,0 +1,63 @@
+@import "/src/assets/styles/colors";
+
+.root {
+  margin-top: auto;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.subHeader {
+  margin-bottom: 16px;
+  font-weight: 700 !important;
+  box-sizing: border-box;
+}
+
+.wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: transparent;
+  //padding: 25px 47px;
+}
+
+.row {
+  display: flex;
+  background-color: get-color('white',  100);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+.column {
+  display: flex;
+  background-color: get-color('white',  100);
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.comment {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  padding: 5px 15px 5px 20px;
+}
+
+.status {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.content {
+  h5 {
+    padding-left: 20px;
+  }
+
+  p {
+    font-size: 12px !important;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 5px 15px 5px 20px;
+  }
+}

@@ -1,0 +1,39 @@
+.notificationPopup {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border: 1px solid rgba(64, 165, 46, 0.3);
+  top: 86%;
+  left: 73%;
+  height: auto;
+  width: 25%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1% 0;
+  @keyframes myAnimation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+  animation-name: myAnimation;
+  animation-duration: 4000ms;
+  animation-fill-mode: forwards;
+  h1{
+    font-size: 0.9rem;
+  }
+  .notificationPopup__icon{
+    width: 15%;
+  }
+}

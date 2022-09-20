@@ -1,0 +1,44 @@
+.table {
+    width: 100%;
+  
+    div[role='columnheader'] {
+      color: #9CB1C7;
+    }
+  
+    div[role='row'] {
+      border-radius: 4px;
+  
+      > * {
+        line-height: 18px;
+      }
+  
+      :nth-child(1) {
+        max-width: 40px;
+      }
+  
+      :nth-child(2) {
+        max-width: 220px;
+      }
+  
+      :nth-child(3) {
+        max-width: 100px;
+      }
+  
+      :nth-child(4) {
+        max-width: 140px;
+      }
+  
+      :nth-child(5) {
+        max-width: 150px;
+      }
+  
+      :nth-child(6) {
+        max-width: 100px;
+      }
+  
+      > div[role='cell'] {
+        width: auto;
+        white-space: normal;
+      }
+    }
+  }

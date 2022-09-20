@@ -1,0 +1,69 @@
+version: '3.8'
+services:
+  app:
+    image: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}${CI_COMMIT_SHORT_SHA}
+    hostname: clients-frontend_app
+    networks:
+      - utg
+      - proxy
+    deploy:
+      replicas: 1
+      placement:
+        # max_replicas_per_node: 1
+        constraints:
+          - node.labels.clients == true # by label
+      restart_policy:
+        condition: on-failure
+        delay: 30s
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy"
+        # clients-frontend_app (replace with yours)
+        - "traefik.http.routers.clients-frontend.entrypoints=websecure"
+        - "traefik.http.routers.clients-frontend.rule=Host(`clients.dev.utg.group`)"
+        - "traefik.http.routers.clients-frontend.service=clients-frontend_app"
+        #- "traefik.http.routers.clients-frontend.middlewares=redirect-to-https"
+        - "traefik.http.services.clients-frontend_app.loadbalancer.server.port=80"
+        - "traefik.http.services.clients-frontend_app.loadbalancer.passhostheader=true"
+        
+        # - "traefik.tcp.routers.clients-frontend-two.rule=HostSNI(`*`)"
+        # - "traefik.tcp.routers.clients-frontend-two.entrypoints=websecure,web"
+        # - "traefik.tcp.routers.clients-frontend-two.tls=true"
+        # - "traefik.tcp.routers.clients-frontend-two.service=clients-frontend_app"
+        # - "traefik.tcp.services.clients-frontend_app.loadbalancer.server.port=80"
+
+        # - "traefik.http.middlewares.test-redirectscheme.redirectscheme.scheme=https"
+        # - "traefik.http.middlewares.test-redirectscheme.redirectscheme.permanent=true"
+
+    ports:
+      - 30030:80
+    stop_grace_period: 1m
+    environment:
+      KC_REALM: "utg-group"
+      KC_CLIENT_ID: "clients-front"
+      KC_URL: "https://sso.dev.utg.group/auth/"
+    #### Logiging ####
+    logging:
+      driver: loki
+      options:
+        loki-url: "http://127.0.0.1:3100/loki/api/v1/push"
+        loki-retries: "5"
+        loki-batch-size: "400"
+        loki-pipeline-stages: |
+          - json:
+              expressions:
+                level: level
+                path: path
+                method: method
+                msg: msg
+          - labels:
+              msg:
+              level:
+              path:
+              method:
+
+networks:
+  utg:
+    external: true
+  proxy:
+    external: true
